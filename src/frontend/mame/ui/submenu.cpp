@@ -50,6 +50,12 @@ std::vector<submenu::option> submenu::advanced_options()
 {
 	return std::vector<option>{
 			{ option_type::HEAD, N_("Advanced Options") },
+			
+			{ option_type::HEAD, N_("USB-DVG Options") },
+			{ option_type::EMU,  N_("Vector driver"),                           OPTION_VECTOR_DRIVER},			
+			{ option_type::EMU,  N_("Vector port"),                             OPTION_VECTOR_PORT},		
+			{ option_type::EMU,  N_("Vector screen mirror"),                    OPTION_VECTOR_SCREEN_MIRROR},						
+
 			{ option_type::HEAD, N_("Performance Options") },
 			{ option_type::EMU,  N_("Auto frame skip"),                         OPTION_AUTOFRAMESKIP },
 			{ option_type::EMU,  N_("Frame skip"),                              OPTION_FRAMESKIP },

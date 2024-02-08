@@ -167,6 +167,8 @@ std::error_condition osd_file::open(std::string const &path, uint32_t openflags,
 		return win_open_socket(path, openflags, file, filesize);
 	else if (win_check_ptty_path(path))
 		return win_open_ptty(path, openflags, file, filesize);
+	else if (win_check_tty_path(path))
+		return win_open_tty(path, openflags, file, filesize);		
 
 	// convert path to TCHAR
 	osd::text::tstring t_path;
